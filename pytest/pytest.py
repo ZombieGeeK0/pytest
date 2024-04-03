@@ -1,5 +1,5 @@
 from subprocess import Popen
-import platform, smtplib, requests
+import platform, smtplib, requests, socket
 from pwn import *
 
 date = hora = datetime.datetime.now() 
@@ -61,6 +61,24 @@ def discord_send_message(webhook, message):
 
   except:
     print('\n[-] No se ha podido enviar el mensaje\n')
+
+def validate_ip(ip):
+  try:
+    socket.inet_aton(ip)
+    return True
+
+  except:
+    return False
+
+
+
+
+
+
+
+
+
+
 
 
 
