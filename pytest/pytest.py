@@ -53,3 +53,16 @@ def get_status(url):
   response = requests.get(url)
   print(f'\n[-] Código de respuesta: {response.status_code}')
   print(f'[-] Informe del estado: {response.reason}\n')
+
+def discord_send_message(webhook, message):
+  try:
+    requests.post(webhook, json={'username': 'Zombiegeek0', 'content': mensaje})
+    print('\n[-] Mensaje enviado\n')
+
+  except:
+    print('\n[-] No se ha podido enviar el mensaje\n')
+
+
+
+
+
