@@ -8,3 +8,4 @@ from .pytest import get_date
 from .pytest import smtp_login
 from .pytest import brute_ssh
 from .pytest import test_port
+from .pytest import get_status
