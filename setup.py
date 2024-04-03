@@ -9,15 +9,20 @@ AUTHOR = 'Zombiegeek0'
 AUTHOR_EMAIL = '3xpl017.contact@proton.me'
 URL = 'https://github.com/ZombieGeek0' 
 
-LICENSE = 'MPL-2' 
-DESCRIPTION = 'Librería para leer ficheros PDFs y extraer la información en formato str' #Descripción corta
-LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding='utf-8') #Referencia al documento README con una descripción más elaborada
+LICENSE = 'MPL-2.0' 
+DESCRIPTION = 'Librería para realizar pruebas de penetración a simples con Python'
+LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding='utf-8')
 LONG_DESC_TYPE = "text/markdown"
 
 
-#Paquetes necesarios para que funcione la libreía. Se instalarán a la vez si no lo tuvieras ya instalado
 INSTALL_REQUIRES = [
-      'pymupdf'
+      'subprocess',
+      'colorama',
+      'os',
+      'socket',
+      'requests',
+      'datetime',
+      'platform'
       ]
 
 setup(
