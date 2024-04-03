@@ -11,3 +11,4 @@ from .pytest import test_port
 from .pytest import get_status
 from .pytest import discord_send_message
 from .pytest import validate_ip
+from .pytest import dos_attack
