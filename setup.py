@@ -23,7 +23,8 @@ INSTALL_REQUIRES = [
       'requests',
       'datetime',
       'platform',
-      'smtplib'
+      'smtplib',
+      'pwntools'
       ]
 
 setup(
