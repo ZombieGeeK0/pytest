@@ -92,21 +92,3 @@ def dos_attack(ip, port):
 
   except:
     print('\n[-] Error: The attack is stopped')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
