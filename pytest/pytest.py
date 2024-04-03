@@ -72,6 +72,9 @@ def validate_ip(ip):
     print('\n')
     return False
 
+def dos_attack(ip)
+
+
 
 
 
