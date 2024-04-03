@@ -22,7 +22,8 @@ INSTALL_REQUIRES = [
       'socket',
       'requests',
       'datetime',
-      'platform'
+      'platform',
+      'smtplib'
       ]
 
 setup(
