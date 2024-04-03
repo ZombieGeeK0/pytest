@@ -1,5 +1,5 @@
 from subprocess import Popen
-import platform, smtplib
+import platform, smtplib, requests
 from pwn import *
 
 date = hora = datetime.datetime.now() 
@@ -48,13 +48,8 @@ def test_port(host, port):
 
   except:
     print(f'\n[-] The port {port} of the IP {host} is closed\n')
-    
-  
-  
 
-
-
-
-
-
-
+def get_status(url):
+  response = requests.get(url)
+  print(f'\n[-] Código de respuesta: {response.status_code}')
+  print(f'[-] Informe del estado: {response.reason}\n')
