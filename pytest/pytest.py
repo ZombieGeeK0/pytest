@@ -1,5 +1,6 @@
 from subprocess import Popen
 import platform, smtplib
+from pwn import *
 
 date = hora = datetime.datetime.now() 
 hostname = socket.gethostname()
@@ -33,7 +34,21 @@ def smtp_login(email, password):
   smtserver.login(email, password)
 
 def brute_ssh(host, user, password):
-  
+  try:
+    ssh_connection = ssh(host, user, password)
+    print(f'\n[-] Successful connection to {host}, {user}, {password}\n')
+
+  except:
+    print(f'\n[-] Conneciton failed to {host}, {user}, {password}\n')
+
+def test_port(host, port):
+  try:
+    remote(host, port)
+    print(f'\n[-] The port {port} of the IP {host} is opened\n')
+
+  except:
+    print(f'\n[-] The port {port} of the IP {host} is closed\n')
+    
   
   
 
