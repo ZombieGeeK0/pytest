@@ -64,11 +64,15 @@ def discord_send_message(webhook, message):
 
 def validate_ip(ip):
   try:
+    print('\n')
     socket.inet_aton(ip)
     return True
 
   except:
+    print('\n')
     return False
+
+
 
 
 
