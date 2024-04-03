@@ -4,6 +4,9 @@ import platform, smtplib
 date = hora = datetime.datetime.now() 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
+smtserver = smtplib.SMTP('smtp.gmail.com', 587)
+smtserver.ehlo()
+smtserver.starttls()
 
 def start_process(process):
   Popen(process)
@@ -27,6 +30,11 @@ def get_date():
   print(date)
 
 def smtp_login(email, password):
+  smtserver.login(email, password)
+
+def brute_ssh(host, user, password):
+  
+  
   
 
 
