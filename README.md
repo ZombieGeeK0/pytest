@@ -89,11 +89,11 @@ from pytest import dos_attack  # Importamos el módulo necesario
 
 dos_attack('127.0.1.1', '8080')  # Se espacifican tanto la IP por el puerto por el que realizar el ataque
 ```
+<hr>
 
+`[ 📬 ]` Contacta conmigo a través de `Discord` mandando una invitación a `qwfkr.`
 
+    qwfkr
+`[ 📬 ]` Si lo prefieres, mándame un correo a `3xpl017.contact@proton.me.`
 
-
-
-
-
-
+    3xpl017.contact@proton.me.
