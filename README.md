@@ -4,10 +4,15 @@
 
 `[-]` Instalación en `Linux:` 
 
-    pip3 install pytest
+```shell
+pip3 install pytest
+```
+
 `[-]` Instalación en `Windows:`
 
-    pip install pytest
+```shell
+pip install pytest
+```
 
 #### 🏁 FUNCIONALIDADES 🏁
 
