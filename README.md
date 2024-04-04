@@ -1,6 +1,8 @@
 # pytest
 
-`[-]` Pytest es una libraría simple de Python para realizar pruebas de penetración con Python desde cualquier sistema operativo.
+`[-]` `Pytest es una libraría simple de Python` para realizar pruebas de `penetración con Python` desde cualquier sistema operativo.
+
+`[-]` No ha sido publicada en `Py&Pi,` pero en `poco tiempo` lo estará.
 
 `[-]` Instalación en `Linux:` 
 
